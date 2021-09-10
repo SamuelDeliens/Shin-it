@@ -13,21 +13,28 @@ class Page2 extends StatelessWidget {
             fit: BoxFit.cover,
           ))),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
+          SizedBox(
+            width: 10,
+          ),
+          //boutton retour
           Column(
             children: [
-              FlatButton(
+              SizedBox(
+                height: 10,
+              ),
+              TextButton(
                   onPressed: () {
                     Navigator.of(context).pop();
                   },
                   child: Container(
-                    padding: EdgeInsets.fromLTRB(5, 20, 0, 0),
                     width: 70,
                     child: Image.asset('assets/pics/return.png'),
                   ))
             ],
           ),
+          Spacer(),
+          //contenue
           Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -40,20 +47,27 @@ class Page2 extends StatelessWidget {
                   )),
             ],
           ),
+          //boutton suite
+          Spacer(),
           Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              FlatButton(
+              TextButton(
                   onPressed: () {
                     Navigator.pushNamed(context, '/page3');
                   },
                   child: Container(
-                    padding: EdgeInsets.fromLTRB(0, 0, 10, 20),
                     width: 70,
                     child: Image.asset('assets/pics/continue.png'),
-                  ))
+                  )),
+              SizedBox(
+                height: 10,
+              ),
             ],
-          )
+          ),
+          SizedBox(
+            width: 10,
+          ),
         ],
       ),
     );

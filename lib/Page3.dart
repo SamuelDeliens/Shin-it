@@ -15,22 +15,30 @@ class Page3 extends StatelessWidget {
           ))),
       child: Row(
         children: [
+          SizedBox(
+            width: 10,
+          ),
+          //bouton retour
           RowSuper(
             innerDistance: -80,
             children: <Widget>[
+              //boutton retour
               Column(
                 children: [
-                  FlatButton(
+                  SizedBox(
+                    height: 10,
+                  ),
+                  TextButton(
                       onPressed: () {
                         Navigator.of(context).pop();
                       },
                       child: Container(
-                        padding: EdgeInsets.fromLTRB(5, 20, 0, 0),
                         width: 70,
                         child: Image.asset('assets/pics/return.png'),
                       ))
                 ],
               ),
+              //contenu
               Column(
                 children: [
                   Container(
@@ -120,23 +128,40 @@ class Page3 extends StatelessWidget {
               ),
             ],
           ),
+          SizedBox(
+            width: 10,
+          ),
           Column(
-            mainAxisAlignment: MainAxisAlignment.end,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              SizedBox(
+                width: 150,
+                height: 30,
+              ),
               Container(
                 child: Image.asset('assets/pics/coktail1.png'),
                 width: 120,
               ),
-              FlatButton(
-                  padding: EdgeInsets.fromLTRB(50, 0, 0, 0),
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/page4');
-                  },
-                  child: Container(
-                    padding: EdgeInsets.fromLTRB(0, 50, 0, 20),
-                    width: 60,
-                    child: Image.asset('assets/pics/continue.png'),
-                  ))
+              Spacer(),
+              //bouton suite
+              Row(
+                children: [
+                  SizedBox(
+                    width: 50,
+                  ),
+                  TextButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/page4');
+                      },
+                      child: Container(
+                        width: 70,
+                        child: Image.asset('assets/pics/continue.png'),
+                      )),
+                ],
+              ),
+              SizedBox(
+                height: 10,
+              ),
             ],
           )
         ],

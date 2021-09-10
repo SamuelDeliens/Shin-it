@@ -16,16 +16,19 @@ class Page7 extends StatelessWidget {
         alignment: Alignment.center,
         innerDistance: -70,
         children: [
+          //bouton retour
           Container(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                FlatButton(
+                SizedBox(
+                  height: 10,
+                ),
+                TextButton(
                     onPressed: () {
                       Navigator.of(context).pop();
                     },
                     child: Container(
-                      padding: EdgeInsets.fromLTRB(0, 20, 0, 20),
                       width: 100,
                       child: Image.asset('assets/pics/return.png'),
                     ))
@@ -184,16 +187,16 @@ Poupart
                   )),
             ],
           ),
+          //bouton suite
           Container(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                FlatButton(
+                TextButton(
                     onPressed: () {
-                      Navigator.pushNamed(context, '/page8');
+                      Navigator.pushNamed(context, null);
                     },
                     child: Container(
-                      padding: EdgeInsets.fromLTRB(0, 50, 0, 20),
                       width: 100,
                       child: Image.asset('assets/pics/continue.png'),
                     ))

@@ -19,19 +19,26 @@ class Page5 extends StatelessWidget {
           RowSuper(
             innerDistance: -70,
             children: [
+              //bouton retour
+              SizedBox(
+                width: 80,
+              ),
               Column(
                 children: [
-                  FlatButton(
+                  SizedBox(
+                    height: 10,
+                  ),
+                  TextButton(
                       onPressed: () {
                         Navigator.of(context).pop();
                       },
                       child: Container(
-                        padding: EdgeInsets.fromLTRB(5, 20, 0, 0),
                         width: 70,
                         child: Image.asset('assets/pics/return.png'),
                       ))
                 ],
               ),
+              //contenu
               Column(
                 children: [
                   Container(
@@ -40,7 +47,7 @@ class Page5 extends StatelessWidget {
                       style: Theme.of(context).textTheme.headline3,
                       textAlign: TextAlign.center,
                     ),
-                    padding: EdgeInsets.fromLTRB(0, 20, 0, 20),
+                    padding: EdgeInsets.fromLTRB(80, 20, 0, 20),
                   ),
                   Container(
                     child: Row(
@@ -155,7 +162,8 @@ class Page5 extends StatelessWidget {
                                 ),
                               ],
                             ),
-                            Row(
+                            RowSuper(
+                              innerDistance: -10,
                               children: [
                                 Container(
                                   width: 250,
@@ -183,12 +191,11 @@ class Page5 extends StatelessWidget {
                                   ),
                                 ),
                                 Container(
-                                  width: 40,
-                                  child: FlatButton(
+                                  width: 55,
+                                  child: TextButton(
                                     onPressed: () {
                                       Navigator.pushNamed(context, '/page6');
                                     },
-                                    padding: EdgeInsets.fromLTRB(0, 0, 0, 0),
                                     child: Image.asset('assets/pics/go.png'),
                                   ),
                                 ),
@@ -203,18 +210,26 @@ class Page5 extends StatelessWidget {
               ),
             ],
           ),
+          //bouton suite
+          SizedBox(
+            width: 15,
+          ),
           Column(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              FlatButton(
-                  onPressed: () {
-                    Navigator.of(context).pushNamed('/page3');
-                  },
-                  child: Container(
-                    padding: EdgeInsets.fromLTRB(0, 50, 0, 20),
-                    width: 60,
-                    child: Image.asset('assets/pics/continue.png'),
-                  ))
+              TextButton(
+                onPressed: () {
+                  Navigator.pushNamedAndRemoveUntil(
+                      context, '/page3', ModalRoute.withName('/page2'));
+                },
+                child: Container(
+                  width: 70,
+                  child: Image.asset('assets/pics/continue.png'),
+                ),
+              ),
+              SizedBox(
+                height: 10,
+              ),
             ],
           )
         ],

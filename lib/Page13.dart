@@ -58,8 +58,11 @@ class Page13 extends StatelessWidget {
                                     ),
                           ),
                         ),
+                        SizedBox(
+                          width: 10,
+                        ),
                         Container(
-                          child: FlatButton(
+                          child: TextButton(
                               onPressed: () {
                                 Navigator.popUntil(
                                     context, ModalRoute.withName('/page3'));

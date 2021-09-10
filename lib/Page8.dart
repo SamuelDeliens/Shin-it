@@ -15,17 +15,20 @@ class Page8 extends StatelessWidget {
             fit: BoxFit.cover,
           ))),
       child: RowSuper(
-        innerDistance: -10,
+        innerDistance: 0,
         children: [
           Column(
             children: [
-              FlatButton(
+              //bouton retour
+              SizedBox(
+                height: 10,
+              ),
+              TextButton(
                 onPressed: () {
                   Navigator.of(context).pop();
                 },
                 child: Container(
-                  padding: EdgeInsets.fromLTRB(0, 20, 0, 20),
-                  width: 65,
+                  width: 70,
                   child: Image.asset('assets/pics/return.png'),
                 ),
               ),
@@ -226,12 +229,12 @@ class Page8 extends StatelessWidget {
                 child: Image.asset('assets/pics/haut_France.png'),
               ),
               Spacer(),
-              FlatButton(
+              //bouton suite
+              TextButton(
                   onPressed: () {
                     Navigator.pushNamed(context, '/page9');
                   },
                   child: Container(
-                    padding: EdgeInsets.fromLTRB(0, 50, 0, 20),
                     width: 65,
                     child: Image.asset('assets/pics/continue.png'),
                   ))

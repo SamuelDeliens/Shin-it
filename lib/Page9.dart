@@ -15,27 +15,36 @@ class Page9 extends StatelessWidget {
       child: RowSuper(
         innerDistance: -80,
         children: [
+          SizedBox(
+            width: 80,
+          ),
+          //bouton retour
           Container(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                FlatButton(
+                SizedBox(
+                  height: 10,
+                ),
+                TextButton(
                     onPressed: () {
                       Navigator.of(context).pop();
                     },
                     child: Container(
-                      padding: EdgeInsets.fromLTRB(0, 20, 0, 20),
-                      width: 60,
+                      width: 70,
                       child: Image.asset('assets/pics/return.png'),
                     ))
               ],
             ),
           ),
+          SizedBox(
+            width: 100,
+          ),
           Container(
             child: Column(
               children: [
                 Container(
-                  padding: EdgeInsets.fromLTRB(0, 30, 0, 10),
+                  padding: EdgeInsets.fromLTRB(0, 35, 0, 10),
                   child: Text(
                     'Sirop de Safran de la baie de Somme Anne Poupart',
                     style: Theme.of(context)
@@ -133,6 +142,7 @@ class Page9 extends StatelessWidget {
               ],
             ),
           ),
+          //bouton suite
           Container(
             child: Column(
               children: [
@@ -144,12 +154,11 @@ class Page9 extends StatelessWidget {
                   child: Image.asset('assets/pics/haut_France.png'),
                 ),
                 Spacer(),
-                FlatButton(
+                TextButton(
                     onPressed: () {
                       Navigator.pushNamed(context, '/page10');
                     },
                     child: Container(
-                      padding: EdgeInsets.fromLTRB(0, 50, 0, 20),
                       width: 65,
                       child: Image.asset('assets/pics/continue.png'),
                     ))

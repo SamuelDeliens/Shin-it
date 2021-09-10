@@ -1,0 +1,11 @@
+framework module MultiplatformBleAdapter {
+  umbrella header "MultiplatformBleAdapter-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module MultiplatformBleAdapter.Swift {
+    header "MultiplatformBleAdapter-Swift.h"
+    requires objc
+}

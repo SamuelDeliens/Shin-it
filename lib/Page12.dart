@@ -14,17 +14,20 @@ class Page12 extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
+          //bouton retour
           Container(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                FlatButton(
+                SizedBox(
+                  height: 10,
+                ),
+                TextButton(
                     onPressed: () {
                       Navigator.of(context).pop();
                     },
                     child: Container(
-                      padding: EdgeInsets.fromLTRB(0, 20, 0, 20),
-                      width: 65,
+                      width: 70,
                       child: Image.asset('assets/pics/return.png'),
                     ))
               ],
@@ -33,7 +36,9 @@ class Page12 extends StatelessWidget {
           Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Spacer(),
+              SizedBox(
+                height: 50,
+              ),
               Container(
                 child: Text(
                   'Vous êtes désormais en possession de la lampe.',
@@ -62,11 +67,11 @@ class Page12 extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 5,
+                height: 10,
               ),
               Row(
                 children: [
-                  FlatButton(
+                  TextButton(
                     onPressed: () {
                       Navigator.pushNamed(context, '/page13');
                     },
@@ -75,7 +80,7 @@ class Page12 extends StatelessWidget {
                       child: Image.asset('assets/pics/yes.png'),
                     ),
                   ),
-                  FlatButton(
+                  TextButton(
                     onPressed: () {
                       Navigator.pushNamed(context, '/page13');
                     },
@@ -89,17 +94,17 @@ class Page12 extends StatelessWidget {
               Spacer(),
             ],
           ),
+          //bouton suite
           Container(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                FlatButton(
+                TextButton(
                     onPressed: () {
                       Navigator.pushNamed(context, '/page13');
                     },
                     child: Container(
-                      padding: EdgeInsets.fromLTRB(0, 50, 0, 20),
-                      width: 60,
+                      width: 70,
                       child: Image.asset('assets/pics/continue.png'),
                     ))
               ],

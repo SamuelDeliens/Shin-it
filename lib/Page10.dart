@@ -15,21 +15,27 @@ class Page10 extends StatelessWidget {
       child: RowSuper(
         innerDistance: -80,
         children: [
+          //bouton retour
           Container(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                FlatButton(
+                SizedBox(
+                  height: 10,
+                ),
+                TextButton(
                     onPressed: () {
                       Navigator.of(context).pop();
                     },
                     child: Container(
-                      padding: EdgeInsets.fromLTRB(0, 20, 0, 20),
-                      width: 65,
+                      width: 70,
                       child: Image.asset('assets/pics/return.png'),
                     ))
               ],
             ),
+          ),
+          SizedBox(
+            width: 90,
           ),
           Container(
             child: Column(
@@ -104,17 +110,20 @@ class Page10 extends StatelessWidget {
               ],
             ),
           ),
+          SizedBox(
+            width: 100,
+          ),
+          //bouton suite
           Container(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                FlatButton(
+                TextButton(
                     onPressed: () {
                       Navigator.pushNamed(context, '/page11');
                     },
                     child: Container(
-                      padding: EdgeInsets.fromLTRB(0, 50, 0, 20),
-                      width: 60,
+                      width: 70,
                       child: Image.asset('assets/pics/continue.png'),
                     ))
               ],

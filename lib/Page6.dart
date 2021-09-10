@@ -19,18 +19,28 @@ class Page6 extends StatelessWidget {
           Container(
             width: 420,
             child: RowSuper(
-              innerDistance: -80,
+              innerDistance: -60,
               children: [
+                //bouton retour
                 Column(
                   children: [
+                    SizedBox(
+                      height: 10,
+                    ),
                     Container(
-                      padding: EdgeInsets.fromLTRB(5, 20, 0, 0),
-                      width: 450,
-                      child: FlatButton(
-                        onPressed: () {
-                          Navigator.of(context).pop();
-                        },
-                        child: Image.asset('assets/pics/return.png'),
+                      width: 350,
+                      child: Row(
+                        children: [
+                          Container(
+                            width: 80,
+                            child: TextButton(
+                              onPressed: () {
+                                Navigator.of(context).pop();
+                              },
+                              child: Image.asset('assets/pics/return.png'),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ],
@@ -331,15 +341,15 @@ class Page6 extends StatelessWidget {
                     ),
                   ],
                 ),
+                //bouton suite
                 Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    FlatButton(
+                    TextButton(
                         onPressed: () {
-                          Navigator.pushNamed(context, '/page3');
+                          Navigator.pushNamed(context, null);
                         },
                         child: Container(
-                          padding: EdgeInsets.fromLTRB(0, 50, 0, 20),
                           width: 60,
                           child: Image.asset('assets/pics/continue.png'),
                         ))
